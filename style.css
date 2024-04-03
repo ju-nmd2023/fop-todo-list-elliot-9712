@@ -22,22 +22,51 @@
   .toDoContainer {
     width: 80%;
     height: 95%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     background-color: green;
   }
   
   #list-header {
     width: 80%;
     height: 10%;
-    background-color: yellow;
-    margin: auto;
-    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 2rem;
+
+  }
+
+  #list-header h1 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
   }
   
   #list-content {
     width: 80%;
-    height: 82.5%;
+    height: 80%;
     background-color: aqua;
     margin: auto;
+  }
+
+  .input-container {
+    width: 80%;
+    height: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+  }
+
+  #list-input {
+    width: 70%;
+    height: 2rem;
+    text-indent: 0.6rem;
+  }
+
+  #submitButton {
+    width: 25%;
+    height: 2.2rem;
+    float: right;
+    cursor: pointer;
   }
