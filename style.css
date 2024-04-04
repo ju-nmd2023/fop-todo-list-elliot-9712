@@ -43,10 +43,10 @@
     align-items: center; 
   }
   
-  #list-content {
+  #listContent {
     width: 80%;
     height: 80%;
-    background-color: aqua;
+    background-color: white;
     margin: auto;
   }
 
@@ -69,4 +69,21 @@
     height: 2.2rem;
     float: right;
     cursor: pointer;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul li {
+    height: 1rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;  
   }
