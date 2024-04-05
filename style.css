@@ -7,16 +7,11 @@
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    background-color: beige;
   }
 
-  #grid1 {
-    background-color: lightblue;
-  }
   #grid2 {
-    background-color: lightcyan;
-  }
-  #grid3 {
-    background-color: lightblue;
+    grid-column: 2;
   }
 
   .toDoContainer {
@@ -24,7 +19,7 @@
     height: 95%;
     margin-left: auto;
     margin-right: auto;
-    background-color: green;
+    background-color:floralwhite;
   }
   
   #list-header {
@@ -41,6 +36,11 @@
     display: flex;
     justify-content: center;
     align-items: center; 
+    font-size: 3rem;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
   }
   
   #listContent {
@@ -48,6 +48,7 @@
     height: 80%;
     background-color: white;
     margin: auto;
+    border: 1px solid black;
   }
 
   .input-container {
@@ -83,13 +84,16 @@
     position: relative;
     padding: 12px 8px 12px 40px;
     list-style-type: none;
-    background: #eee;
-    font-size: 1rem;
+    font-size: 1.2rem;
     transition: 0.2s;  
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    border-bottom: 1px solid
   }
 
   .active {
-    background-color: lightgrey;
     color: black;
     text-decoration: line-through;
   }
