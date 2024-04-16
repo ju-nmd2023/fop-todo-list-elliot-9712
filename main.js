@@ -2,7 +2,8 @@ function loadList() {
     const inputArray = JSON.parse(localStorage.getItem("list")) || [];
     const ul = document.createElement("ul");
 
-    inputArray.forEach(function(item, index) {
+    for (let index = 0; index < inputArray.length; index++) {
+        const item = inputArray[index];
         const li = document.createElement("li");
         li.textContent = item.text;
 
@@ -23,7 +24,7 @@ function loadList() {
         });
 
         ul.appendChild(li);
-    });
+    }
 
     document.getElementById("listContent").innerHTML = '';
     document.getElementById("listContent").appendChild(ul);
@@ -43,7 +44,7 @@ function removeItem(index) {
     loadList(); 
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+function onLoadHandler() {
     loadList();
 
     document.getElementById("submitButton").addEventListener("click", function() {
@@ -54,7 +55,9 @@ document.addEventListener("DOMContentLoaded", function() {
         inputArray.push({ text: inputValue, active: false });
         localStorage.setItem("list", JSON.stringify(inputArray));
         
-        document.getElementById("list-input").value = "";
+        document.getElementById("list-input").value = ""; //revert back the input field to an empty text field
         loadList();
-    });
-});
+    })
+};
+    
+onLoadHandler();
