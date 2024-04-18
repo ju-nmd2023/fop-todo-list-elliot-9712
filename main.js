@@ -1,3 +1,5 @@
+let inputArray = [];
+
 function loadList() {
     const inputArray = JSON.parse(localStorage.getItem("list")) || [];
     const ul = document.createElement("ul");
@@ -18,12 +20,13 @@ function loadList() {
             removeItem(index);
         });
 
-        li.appendChild(deleteIcon);
+
         li.addEventListener('click', function() {
             toggleClass(li, index);
         });
 
         ul.appendChild(li);
+        li.appendChild(deleteIcon);
     }
 
     document.getElementById("listContent").innerHTML = '';
